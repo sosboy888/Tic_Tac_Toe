@@ -1,6 +1,7 @@
 //Author:Swastik Sharma
 package com.tictactoe.sosboy888.tictactoegame
 
+import android.content.Intent
 import android.graphics.Color
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
@@ -105,10 +106,13 @@ class MainActivity : AppCompatActivity() {
         if(winner!=-1){
             if(winner==1){
                 Toast.makeText(this,"Player 1 Won!",Toast.LENGTH_SHORT).show()
+                val restart=Intent(this,MainActivity::class.java)
+                startActivity(restart)
             }
             if(winner==2){
                 Toast.makeText(this,"Player 2 Won!",Toast.LENGTH_SHORT).show()
-
+                val restart=Intent(this,MainActivity::class.java)
+                startActivity(restart)
             }
         }
     }
